@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Unofficial Alemayehu Nigussie Roast Museum</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <div class="badge">🏛️ OFFICIAL (NOT REALLY)</div>
+      <h1>The Unofficial<br><span class="highlight">Alemayehu Nigussie</span><br>Roast Museum</h1>
+      <p class="hero-subtitle">A lighthearted digital exhibit dedicated to one man's legendary chaos.</p>
+      <p class="hero-sub2">Est. sometime after his third burger of the day.</p>
+      <a href="#about" class="btn btn-primary">
+        🔥 Begin the Roast
+      </a>
+    </div>
+    <div class="hero-scroll-hint">↓ scroll if you dare ↓</div>
+  </header>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">📖 Exhibit A</div>
+      <h2 class="section-title">Who Is This Man?</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">✈️</div>
+          <h3>Former Air Force</h3>
+          <p>Once a man of precision, discipline, and pressed uniforms. Now a man of precise burger orders and disciplined nap scheduling.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🛋️</div>
+          <h3>Elite Couch Commander</h3>
+          <p>Alemayehu has mastered the ancient art of strategic couch positioning — always within arm's reach of both the remote and a snack. Classified.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🍔</div>
+          <h3>Snack Discipline Level: Retired</h3>
+          <p>His retirement-era snack discipline is unmatched. He doesn't eat meals. He conducts <em>nutritional operations</em>.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">📊</div>
+          <h3>Strategic Burger Analyst</h3>
+          <p>Sources report he can identify a drive-thru from 2 miles away by smell alone. Pentagon has refused to confirm or deny.</p>
+        </div>
+      </div>
+      <blockquote class="hero-quote">
+        "He didn't leave the Air Force. The Air Force politely stepped aside."
+        <cite>— Probably someone at his retirement party</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-label">📸 Exhibit B</div>
+      <h2 class="section-title">The Evidence Vault</h2>
+      <p class="section-desc">Photographic documentation of the legend himself. Handled with care.</p>
+
+      <div class="gallery-grid">
+        <!-- IMAGE 1 — update filename if needed -->
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="aleximg/IMG_7695.jpg" alt="Alemayehu looking distinguished and slightly suspicious" loading="lazy" />
+          <div class="gallery-caption">
+            <p>"The look of a man calculating optimal drive-thru queue strategy."</p>
+          </div>
+        </div>
+
+        <!-- IMAGE 2 — update filename if needed -->
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="aleximg/IMG_7696.jpg" alt="Alemayehu exuding unearned confidence" loading="lazy" />
+          <div class="gallery-caption">
+            <p>"This is his 'I definitely meant to do that' face."</p>
+          </div>
+        </div>
+
+        <!-- IMAGE 3 — update filename if needed -->
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="aleximg/IMG_7697.jpg" alt="Alemayehu in peak form" loading="lazy" />
+          <div class="gallery-caption">
+            <p>"Moments before he declared the couch his 'home office'."</p>
+          </div>
+        </div>
+
+        <!-- IMAGE 4 — update filename if needed -->
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="aleximg/IMG_7698.jpg" alt="Alemayehu being suspiciously photogenic" loading="lazy" />
+          <div class="gallery-caption">
+            <p>"He asked for retakes until the lighting was 'correct.' Four hours later…"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); shiftLightbox(-1)">‹</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); shiftLightbox(1)">›</button>
+  </div>
+
+  <!-- ===================== ROAST GENERATOR ===================== -->
+  <section class="roast-section" id="roast">
+    <div class="container">
+      <div class="section-label">🎤 Exhibit C</div>
+      <h2 class="section-title">The Roast-O-Matic 3000™</h2>
+      <p class="section-desc">Patent pending. Results may vary. Void where prohibited by good taste.</p>
+      <div class="roast-machine">
+        <div class="roast-output" id="roast-output">
+          <span class="roast-idle">👆 Press the button. You know you want to.</span>
+        </div>
+        <button class="btn btn-fire" id="roast-btn" onclick="generateRoast()">
+          🔥 Generate a Roast
+        </button>
+      </div>
+      <div class="roast-counter">Roasts delivered: <span id="roast-count">0</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-label">📅 Exhibit D</div>
+      <h2 class="section-title">The Alemayehu Chronicles</h2>
+      <p class="section-desc">A historical account. 90% accurate. Probably.</p>
+
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-dot">✈️</div>
+          <div class="timeline-card">
+            <div class="timeline-era">The Air Force Era</div>
+            <h3>Discipline. Precision. Uniforms.</h3>
+            <p>Woke up at 4am voluntarily. Pressed his pants. Said things like "yes sir" without irony. The man was built different. Peak performance. Terrifying.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot">🍔</div>
+          <div class="timeline-card">
+            <div class="timeline-era">The Transition Era</div>
+            <h3>The First Cheeseburger Incident.</h3>
+            <p>A Tuesday. Nobody saw it coming. He ordered a double patty "just to try it." There was no going back. Eyewitnesses describe it as "the look of a man finding religion."</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-dot">📺</div>
+          <div class="timeline-card">
+            <div class="timeline-era">The Couch Command Era</div>
+            <h3>Infrastructure. Pillows. Remote Control.</h3>
+            <p>Established a perimeter around the sectional sofa. Created a three-snack rotation system. Achieved what military experts call "total domestic air superiority."</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-dot">🎖️</div>
+          <div class="timeline-card">
+            <div class="timeline-era">The Modern Era</div>
+            <h3>Full-Time Snack Strategist.</h3>
+            <p>Operates at peak efficiency. Nap-to-snack ratio fully optimized. Has opinions about parking lots. Still somehow more organized than most people with jobs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HALL OF FAME ===================== -->
+  <section class="hof-section" id="hof">
+    <div class="container">
+      <div class="section-label">🏆 Exhibit E</div>
+      <h2 class="section-title">Hall of Fame</h2>
+      <p class="section-desc">Awards. Honors. Achievements. All made up.</p>
+
+      <div class="hof-grid">
+        <div class="hof-card">
+          <div class="hof-trophy">🎭</div>
+          <h3>Most Dramatic Entrance</h3>
+          <p>Three-time consecutive winner. He doesn't enter rooms — he <em>arrives</em>.</p>
+          <div class="hof-ribbon">GOLD</div>
+        </div>
+
+        <div class="hof-card">
+          <div class="hof-trophy">🍔</div>
+          <h3>Fastest Burger Detection</h3>
+          <p>World record: identified a Five Guys from inside a moving vehicle at highway speed. Unaided.</p>
+          <div class="hof-ribbon">PLATINUM</div>
+        </div>
+
+        <div class="hof-card">
+          <div class="hof-trophy">🪑</div>
+          <h3>Chair Force Commander</h3>
+          <p>Promoted himself. No one objected. The couch remains under his command to this day.</p>
+          <div class="hof-ribbon">GOLD</div>
+        </div>
+
+        <div class="hof-card">
+          <div class="hof-trophy">📦</div>
+          <h3>Lifetime Achievement in Snack Logistics</h3>
+          <p>For decades of dedication to the procurement, storage, and consumption of snacks under all conditions.</p>
+          <div class="hof-ribbon">LEGENDARY</div>
+        </div>
+
+        <div class="hof-card">
+          <div class="hof-trophy">💤</div>
+          <h3>Nap Scheduling Excellence</h3>
+          <p>His nap calendar is the most well-maintained document he has ever produced. Peer-reviewed.</p>
+          <div class="hof-ribbon">SILVER</div>
+        </div>
+
+        <div class="hof-card">
+          <div class="hof-trophy">🅿️</div>
+          <h3>Advanced Parking Lot Commentary</h3>
+          <p>Provided unsolicited analysis of 400+ parking lots across 12 states. Nobody asked. Nobody stopped him.</p>
+          <div class="hof-ribbon">BRONZE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">🏛️</div>
+      <h3>The Unofficial Alemayehu Nigussie Roast Museum</h3>
+      <p class="footer-tagline">We stand in awe. We also laugh.</p>
+      <a href="#top" class="btn btn-secondary">↑ Back to the Top</a>
+      <div class="footer-disclaimer">
+        <strong>Disclaimer:</strong> This site is a playful parody/roast made purely for entertainment among friends. All jokes are fictional and absurd. No actual burgers were harmed. Don't take it too seriously — especially you, Alex.
+      </div>
+      <p class="footer-copy">Made with 🔥 and zero regrets · Not affiliated with any real institution · Ever.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
