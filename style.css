@@ -19,8 +19,8 @@
   --gold:     #f5c518;
   --ember:    #ff8c00;
   --text:     #f0ece3;
-  --muted:    #888;
-  --radius:   12px;
+  --muted:    #999;
+  --radius:   14px;
   --font:     'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
@@ -30,7 +30,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
@@ -43,41 +44,43 @@ img {
 
 /* ---------- Utility ---------- */
 .container {
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 .section-label {
   display: inline-block;
   background: var(--fire);
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 800;
-  margin-bottom: 12px;
-  line-height: 1.15;
+  margin-bottom: 18px;
+  line-height: 1.12;
 }
 
 .section-desc {
   color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 48px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin-bottom: 60px;
+  max-width: 580px;
 }
 
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 16px 36px;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 700;
@@ -136,7 +139,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px 60px;
+  padding: 100px 32px 80px;
   background:
     radial-gradient(ellipse at 50% 0%, rgba(255, 77, 0, 0.18) 0%, transparent 60%),
     var(--bg);
@@ -149,7 +152,7 @@ img {
   position: absolute;
   inset: 0;
   background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-size: 32px 32px;
   pointer-events: none;
 }
 
@@ -160,25 +163,25 @@ img {
   color: var(--fire);
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 5px 16px;
+  padding: 6px 20px;
   border-radius: 999px;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
   animation: fadeDown 0.6s ease both;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 860px;
   animation: fadeUp 0.8s ease 0.1s both;
 }
 
 .hero h1 {
-  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-size: clamp(2.8rem, 7.5vw, 5.5rem);
   font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin-bottom: 28px;
+  letter-spacing: -0.025em;
 }
 
 .highlight {
@@ -189,24 +192,25 @@ img {
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
   color: var(--muted);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 .hero-sub2 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: 52px;
   font-style: italic;
 }
 
 .hero-scroll-hint {
   position: absolute;
-  bottom: 28px;
+  bottom: 32px;
   font-size: 0.8rem;
   color: #444;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   animation: bounce 2s ease infinite;
 }
 
@@ -229,63 +233,65 @@ img {
    ABOUT
    ============================================================ */
 .about {
-  padding: 100px 0;
+  padding: 130px 0;
   background: var(--surface);
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 24px;
-  margin-bottom: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-bottom: 64px;
 }
 
 .about-card {
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px 24px;
+  padding: 40px 32px;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .about-card:hover {
   transform: translateY(-6px);
   border-color: var(--fire);
-  box-shadow: 0 12px 40px rgba(255, 77, 0, 0.15);
+  box-shadow: 0 14px 44px rgba(255, 77, 0, 0.15);
 }
 
 .about-icon {
-  font-size: 2.4rem;
-  margin-bottom: 16px;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
 }
 
 .about-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .about-card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #bbb;
+  line-height: 1.65;
 }
 
 .hero-quote {
   background: var(--surface2);
   border-left: 4px solid var(--fire);
   border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 24px 32px;
-  font-size: 1.15rem;
+  padding: 32px 40px;
+  font-size: 1.2rem;
   font-style: italic;
   color: #ccc;
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
+  line-height: 1.65;
 }
 
 .hero-quote cite {
   display: block;
-  margin-top: 12px;
-  font-size: 0.85rem;
+  margin-top: 16px;
+  font-size: 0.9rem;
   color: var(--muted);
   font-style: normal;
 }
@@ -294,14 +300,14 @@ img {
    GALLERY
    ============================================================ */
 .gallery-section {
-  padding: 100px 0;
+  padding: 130px 0;
   background: var(--bg);
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
 }
 
 .gallery-item {
@@ -310,35 +316,35 @@ img {
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .gallery-item:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-8px) scale(1.01);
   border-color: var(--gold);
-  box-shadow: 0 16px 48px rgba(245, 197, 24, 0.15);
+  box-shadow: 0 20px 56px rgba(245, 197, 24, 0.15);
 }
 
 .gallery-item img {
   width: 100%;
-  height: 260px;
+  height: 300px;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: transform 0.38s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .gallery-caption {
-  padding: 16px;
+  padding: 20px 22px 22px;
 }
 
 .gallery-caption p {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--muted);
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* ---------- Lightbox ---------- */
@@ -434,30 +440,30 @@ img {
    ROAST GENERATOR
    ============================================================ */
 .roast-section {
-  padding: 100px 0;
+  padding: 130px 0;
   background: var(--surface);
   text-align: center;
 }
 
 .roast-machine {
-  max-width: 680px;
-  margin: 0 auto 24px;
+  max-width: 720px;
+  margin: 0 auto 28px;
 }
 
 .roast-output {
   background: var(--surface2);
   border: 2px solid var(--border);
   border-radius: var(--radius);
-  padding: 36px 32px;
-  min-height: 130px;
+  padding: 44px 40px;
+  min-height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
   font-style: italic;
   color: var(--text);
-  margin-bottom: 28px;
-  line-height: 1.6;
+  margin-bottom: 32px;
+  line-height: 1.7;
   transition: border-color 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -466,10 +472,10 @@ img {
 .roast-output::before {
   content: '"';
   position: absolute;
-  top: 6px;
-  left: 16px;
-  font-size: 5rem;
-  color: rgba(255,77,0,0.08);
+  top: 4px;
+  left: 18px;
+  font-size: 6rem;
+  color: rgba(255,77,0,0.07);
   font-family: Georgia, serif;
   line-height: 1;
   pointer-events: none;
@@ -477,7 +483,7 @@ img {
 
 .roast-output.firing {
   border-color: var(--fire);
-  box-shadow: 0 0 32px rgba(255, 77, 0, 0.25);
+  box-shadow: 0 0 36px rgba(255, 77, 0, 0.25);
 }
 
 .roast-idle {
@@ -486,8 +492,8 @@ img {
 
 .roast-counter {
   color: #555;
-  font-size: 0.85rem;
-  margin-top: 12px;
+  font-size: 0.88rem;
+  margin-top: 16px;
 }
 
 .roast-counter span {
@@ -499,13 +505,13 @@ img {
    TIMELINE
    ============================================================ */
 .timeline-section {
-  padding: 100px 0;
+  padding: 130px 0;
   background: var(--bg);
 }
 
 .timeline {
   position: relative;
-  max-width: 780px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
@@ -523,26 +529,26 @@ img {
 .timeline-item {
   display: flex;
   width: 50%;
-  padding-bottom: 56px;
+  padding-bottom: 64px;
   position: relative;
 }
 
 .timeline-item.left {
-  padding-right: 48px;
+  padding-right: 56px;
   justify-content: flex-end;
 }
 
 .timeline-item.right {
-  padding-left: 48px;
+  padding-left: 56px;
   margin-left: 50%;
 }
 
 .timeline-dot {
   position: absolute;
   top: 0;
-  font-size: 1.6rem;
-  width: 48px;
-  height: 48px;
+  font-size: 1.5rem;
+  width: 52px;
+  height: 52px;
   background: var(--surface2);
   border: 2px solid var(--fire);
   border-radius: 50%;
@@ -553,66 +559,67 @@ img {
 }
 
 .timeline-item.left .timeline-dot {
-  right: -24px;
+  right: -26px;
 }
 
 .timeline-item.right .timeline-dot {
-  left: -24px;
+  left: -26px;
 }
 
 .timeline-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
-  max-width: 320px;
+  padding: 28px 28px;
+  max-width: 340px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .timeline-card:hover {
   border-color: var(--fire);
-  box-shadow: 0 8px 32px rgba(255, 77, 0, 0.12);
+  box-shadow: 0 10px 36px rgba(255, 77, 0, 0.12);
 }
 
 .timeline-era {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fire);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .timeline-card h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .timeline-card p {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   color: #bbb;
+  line-height: 1.65;
 }
 
 /* ============================================================
    HALL OF FAME
    ============================================================ */
 .hof-section {
-  padding: 100px 0;
+  padding: 130px 0;
   background: var(--surface);
 }
 
 .hof-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 28px;
 }
 
 .hof-card {
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 32px 24px;
+  padding: 44px 32px 36px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -620,9 +627,9 @@ img {
 }
 
 .hof-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: var(--gold);
-  box-shadow: 0 16px 48px rgba(245, 197, 24, 0.15);
+  box-shadow: 0 20px 56px rgba(245, 197, 24, 0.15);
 }
 
 .hof-card::before {
@@ -634,23 +641,23 @@ img {
 }
 
 .hof-trophy {
-  font-size: 3rem;
-  margin-bottom: 16px;
+  font-size: 3.4rem;
+  margin-bottom: 20px;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(245,197,24,0.4));
+  filter: drop-shadow(0 4px 14px rgba(245,197,24,0.4));
 }
 
 .hof-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .hof-card p {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   color: #bbb;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.65;
+  margin-bottom: 24px;
 }
 
 .hof-ribbon {
@@ -659,7 +666,7 @@ img {
   font-weight: 900;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: 999px;
 }
 
@@ -693,48 +700,59 @@ img {
 .footer {
   background: #080808;
   border-top: 1px solid var(--border);
-  padding: 72px 0 48px;
+  padding: 100px 0 64px;
   text-align: center;
 }
 
 .footer-logo {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
+  font-size: 2.8rem;
+  margin-bottom: 16px;
 }
 
 .footer h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-tagline {
   color: var(--muted);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  font-size: 1rem;
 }
 
 .footer-disclaimer {
-  max-width: 620px;
-  margin: 36px auto 24px;
-  padding: 20px 24px;
+  max-width: 640px;
+  margin: 40px auto 28px;
+  padding: 28px 32px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #777;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .footer-copy {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: #444;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 700px) {
+  .container { padding: 0 20px; }
+
+  .about,
+  .gallery-section,
+  .roast-section,
+  .timeline-section,
+  .hof-section { padding: 80px 0; }
+
+  .section-desc { margin-bottom: 40px; }
+
   .timeline::before { left: 24px; }
 
   .timeline-item {
@@ -743,6 +761,7 @@ img {
     padding-right: 0 !important;
     margin-left: 0 !important;
     justify-content: flex-start !important;
+    padding-bottom: 40px;
   }
 
   .timeline-dot {
@@ -752,6 +771,7 @@ img {
 
   .timeline-card {
     max-width: 100%;
+    padding: 22px 20px;
   }
 
   .lightbox-nav {
@@ -762,14 +782,22 @@ img {
   .lightbox-prev { left: 4px; }
   .lightbox-next { right: 4px; }
 
-  .gallery-item img {
-    height: 200px;
-  }
+  .gallery-item img { height: 220px; }
+
+  .roast-output { padding: 32px 24px; }
+
+  .hof-card { padding: 32px 24px 28px; }
+
+  .footer { padding: 72px 0 48px; }
+  .footer-disclaimer { padding: 22px 22px; }
 }
 
 @media (max-width: 480px) {
-  .btn { padding: 12px 24px; font-size: 0.95rem; }
-  .hero h1 { font-size: 2.2rem; }
+  .btn { padding: 13px 26px; font-size: 0.97rem; }
+  .hero { padding: 80px 20px 60px; }
+  .hero h1 { font-size: 2.4rem; }
+  .hero-sub2 { margin-bottom: 40px; }
+  .about-card { padding: 30px 24px; }
 }
 
 /* ============================================================
